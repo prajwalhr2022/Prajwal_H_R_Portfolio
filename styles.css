@@ -2,17 +2,20 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
+    background: linear-gradient(135deg, #a64dff, #ffffff);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
 }
 
 header {
-    background-color: #4a4a4a;
+    background-color: rgba(74, 74, 74, 0.8);
     color: white;
     padding: 1em 0;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
+    backdrop-filter: blur(10px);
 }
 
 .header-container {
@@ -24,6 +27,9 @@ header {
 
 header h1 {
     margin: 0;
+    font-family: 'Style Script', cursive;
+    font-size: 2em;
+    color: #a64dff;
 }
 
 nav ul {
@@ -42,10 +48,12 @@ nav ul li a {
     text-decoration: none;
     padding: 10px 20px;
     display: block;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 nav ul li a:hover {
-    background-color: #575757;
+    background-color: #a64dff;
+    color: #ffffff;
 }
 
 section {
@@ -56,6 +64,11 @@ section {
 h2 {
     border-bottom: 2px solid #4a4a4a;
     padding-bottom: 0.5em;
+    color: #4a4a4a;
+}
+
+h3 {
+    color: #4a4a4a;
 }
 
 .home-container {
@@ -69,8 +82,9 @@ h2 {
 
 .home-container h2 {
     font-size: 4em;
-    color: #4a4a4a;
+    color: #a64dff;
     margin: 0;
+    animation: fade-in 2s ease-in-out;
 }
 
 .home-container p {
@@ -79,7 +93,7 @@ h2 {
 }
 
 footer {
-    background-color: #4a4a4a;
+    background-color: rgba(74, 74, 74, 0.8);
     color: white;
     text-align: center;
     padding: 1em 0;
@@ -118,4 +132,13 @@ footer {
 
 .home-container .hello.fade-in {
     opacity: 1;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
